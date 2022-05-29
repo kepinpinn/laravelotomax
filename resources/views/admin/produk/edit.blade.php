@@ -2,6 +2,7 @@
 
 @section('content')
 <div class="col-md-9 ms-sm-auto col-lg-9 px-md-4 mb-5">
+    <h4 class="card-title">Edit Data Produk</h4>
     <form action="{{ route('admin.produk.update', ['id' => $produk->id]) }}" method="POST" enctype="multipart/form-data">
         @csrf
             <div class="form-group" style="margin-bottom: 10px;">

@@ -2,6 +2,7 @@
 
 @section('content')
 <div class="col-md-9 ms-sm-auto col-lg-9 px-md-4">
+    <h4 class="card-title">Edit Data Kelompok Indikator</h4>
     <form action="{{ route('admin.kelompokindikator.update', ['id' => $kelompokindikator->id]) }}" method="POST" enctype="multipart/form-data">
         @csrf
             <div class="form-group" style="margin-bottom: 10px;">

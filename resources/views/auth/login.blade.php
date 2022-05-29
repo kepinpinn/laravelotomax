@@ -306,10 +306,10 @@
       <input type="submit" class="fadeIn fourth" value="Log In">
     </form>
 
-    <!-- Remind Passowrd -->
+    <!-- Remind Passowrd 
     <div id="formFooter">
       <a class="underlineHover" href="{{ route('password.request') }}">Forgot Password?</a>
-    </div>
+    </div> -->
 
   </div>
 </div>
