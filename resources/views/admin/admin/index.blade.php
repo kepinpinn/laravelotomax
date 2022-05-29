@@ -7,10 +7,10 @@
             <div class="card-body">
             <div class="row mb-3">
                 <div class="col-10">
-                <h4 class="card-title">Data Merk</h4>
+                <h4 class="card-title">Data Admin</h4>
                 </div>
                 <div class="col-2">
-                <a href="{{ route('admin.merk.tambah') }}" class="btn btn-primary">Tambah</a>
+                <a href="{{ route('admin.admin.tambah') }}" class="btn btn-primary">Tambah</a>
                 </div>
             </div>
             <div class="table-responsive">
@@ -19,22 +19,22 @@
                     <tr>
                     <th width="5%">ID</th>
                     <th>Nama</th>
-                    <th>Gambar</th>
+                    <th>Email</th>
                     <th width="15%">Edit/Hapus</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($merk as $m)
+                    @foreach($user as $u)
                     <tr>
-                        <td align="center">{{ $m->id }}</td>
-                        <td>{{ $m->merek }}</td>
-                        <td><img src="{{ asset('images/'.$m->foto_merek) }}" alt="" width="125"></td>
+                        <td align="center">{{ $u->id }}</td>
+                        <td>{{ $u->name }}</td>
+                        <td>{{ $u->email }}</td>
                         <td align="center">
                         <div class="btn-group" role="group" aria-label="Basic example">
-                            <a href="{{ route('admin.merk.edit', ['id' => $m->id]) }}" class="btn btn-warning btn-sm">
+                            <a href="{{ route('admin.admin.edit', ['id' => $u->id]) }}" class="btn btn-warning btn-sm">
                             <i class="bi bi-pencil-square"></i>
                             </a>
-                            <a href="{{ route('admin.merk.hapus', ['id' => $m->id]) }}" onclick="return confirm('Yakin Hapus data')" class="btn btn-danger btn-sm">
+                            <a href="{{ route('admin.admin.hapus', ['id' => $u->id]) }}" onclick="return confirm('Yakin Hapus data')" class="btn btn-danger btn-sm">
                             <i class="bi bi-trash"></i>
                             </a>
                         </div>
@@ -47,7 +47,7 @@
             </div>
         </div>
             <div class="text-center">
-            {{ $merk->links('vendor.pagination.bootstrap-4') }}
+            {{ $user->links('vendor.pagination.bootstrap-4') }}
             </div>
         </div>
     </div>

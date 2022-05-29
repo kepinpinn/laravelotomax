@@ -27,6 +27,13 @@ Route::group(['middleware' => 'auth'], function (){
     Route::get('admin/dashboard/produk/edit/{id}', [App\Http\Controllers\admin\DashboardController::class, 'editProduk'])->name('admin.produk.edit');
     Route::post('admin/dashboard/produk/update/{id}', [App\Http\Controllers\admin\DashboardController::class, 'updateProduk'])->name('admin.produk.update');
 
+    Route::get('admin/dashboard/admin', [App\Http\Controllers\admin\DashboardController::class, 'indexAdmin'])->name('admin.indexAdmin');
+    Route::get('admin/dashboard/admin/tambah', [App\Http\Controllers\admin\DashboardController::class, 'addAdmin'])->name('admin.admin.tambah');
+    Route::post('admin/dashboard/admin/simpan', [App\Http\Controllers\admin\DashboardController::class, 'saveAdmin'])->name('admin.admin.simpan');
+    Route::get('admin/dashboard/admin/hapus/{id}', [App\Http\Controllers\admin\DashboardController::class, 'deleteAdmin'])->name('admin.admin.hapus');
+    Route::get('admin/dashboard/admin/edit/{id}', [App\Http\Controllers\admin\DashboardController::class, 'editAdmin'])->name('admin.admin.edit');
+    Route::post('admin/dashboard/admin/update/{id}', [App\Http\Controllers\admin\DashboardController::class, 'updateAdmin'])->name('admin.admin.update');
+
     Route::get('admin/dashboard/indikator', [App\Http\Controllers\admin\DashboardController::class, 'indexIndikator'])->name('admin.indexIndikator');
     Route::get('admin/dashboard/indikator/tambah', [App\Http\Controllers\admin\DashboardController::class, 'addIndikator'])->name('admin.indikator.tambah');
     Route::post('admin/dashboard/indikator/simpan', [App\Http\Controllers\admin\DashboardController::class, 'saveIndikator'])->name('admin.indikator.simpan');

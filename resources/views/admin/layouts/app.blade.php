@@ -37,14 +37,16 @@
   <body>
     
 <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-  <a class="navbar-brand col-md-3 col-lg-3 me-0 px-3" href="#">Admin Panel</a>
+  <a class="navbar-brand col-md-3 col-lg-3 me-0 px-3" href="#">
+    <img src="{{ asset('images/otomax.jpg') }}" id="icon" alt="User Icon" height="50"/>
+  </a>
   <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="navbar-nav">
     <div class="nav-item text-nowrap">
     <li class="nav-item">
-      <a class="nav-link px-3" href="{{ route('logout') }}" onclick="event.preventDefault();
+      <a class="nav-link px-3" style="font-size: 20px !important;" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">Sign out</a>
       <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
@@ -53,38 +55,44 @@
   </div>
 </header>
 
-<div class="container-fluid">
+<div class="container-fluid pt-5">
   <div class="row">
-    <nav id="sidebarMenu" class="col-md-3 col-lg-3 d-md-block bg-light sidebar collapse" style="background: #e2e2e2 !important;">
+    <nav id="sidebarMenu" class="col-md-3 col-lg-3 pt-5 mt-5 d-md-block bg-light sidebar collapse" style="background: #ffd884 !important;">
       <div class="position-sticky pt-3">
         <ul class="nav flex-column">
           <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="{{ route('admin.indexAdmin') }}" style="font-size: 20px;">
+              <span data-feather="aperture" style="height: 24px; width: 24px;"></span>
+              Admin
+            </a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" aria-current="page" href="{{ route('admin.indexProduk') }}" style="font-size: 20px;">
-              <span data-feather="book" style="height: 24px; width: 24px;"></span>
+              <span data-feather="aperture" style="height: 24px; width: 24px;"></span>
               Produk
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{ route('admin.indexMerk') }}" style="font-size: 20px;">
-              <span data-feather="book" style="height: 24px; width: 24px;"></span>
+              <span data-feather="aperture" style="height: 24px; width: 24px;"></span>
               Merk
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{ route('admin.indexKelompokIndikator') }}" style="font-size: 20px;">
-              <span data-feather="book" style="height: 24px; width: 24px;"></span>
+              <span data-feather="aperture" style="height: 24px; width: 24px;"></span>
               Kelompok Indikator
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{ route('admin.indexIndikator') }}" style="font-size: 20px;">
-              <span data-feather="book" style="height: 24px; width: 24px;"></span>
+              <span data-feather="aperture" style="height: 24px; width: 24px;"></span>
               Indikator
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{ route('admin.indexRules') }}" style="font-size: 20px;">
-              <span data-feather="book" style="height: 24px; width: 24px;"></span>
+              <span data-feather="aperture" style="height: 24px; width: 24px;"></span>
               Rule
             </a>
           </li>

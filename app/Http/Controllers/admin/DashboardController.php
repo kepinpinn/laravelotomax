@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use App\Models\User;
 use App\Models\Produk;
 use App\Models\Indikator;
 use App\Models\KelompokIndikator;
@@ -102,6 +103,55 @@ class DashboardController extends Controller
         return redirect()->route('admin.indexProduk');
     }
 
+    //Admin
+    public function indexAdmin(){
+        $user = User::paginate(5);
+
+        return view('admin.admin.index', compact(['user']));
+    }
+
+    public function addAdmin(){
+        
+        return view('admin.admin.tambah');
+    }
+
+    public function saveAdmin(Request $req){
+        $user = User::create([
+            'name' => $req->name,
+            'email' => $req->email,
+            'password' => bcrypt($req->password)
+        ]);
+
+        $user->save();
+
+        return redirect()->route('admin.indexAdmin');
+    }
+
+    public function editAdmin($id){
+        $user = User::findOrFail($id);
+
+        return view('admin.admin.edit', compact(['user']));
+    }
+
+    public function updateAdmin(Request $req, $id){
+        $user = User::findOrFail($id);
+
+        $user->name = $req->name;
+        $user->email = $req->email;
+        $user->password = $req->password;
+        
+        $user->save();
+
+        return redirect()->route('admin.indexAdmin');
+    }
+
+    public function deleteAdmin($id){
+        User::destroy($id);
+
+        return redirect()->route('admin.indexAdmin');
+    }
+
+    //Merk
     public function indexMerk(){
         $merk = Merk::paginate(5);
 

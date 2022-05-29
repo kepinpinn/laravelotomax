@@ -1,7 +1,7 @@
 @extends('admin.layouts.app')
 
 @section('content')
-<div class="col-md-9 ms-sm-auto col-lg-9 px-md-4 mt-5">
+<div class="col-md-9 ms-sm-auto col-lg-9 px-md-4">
     <form action="{{ route('admin.kategori.simpan') }}" method="POST" enctype="multipart/form-data">
         @csrf
             <div class="form-group" style="margin-bottom: 10px;">
