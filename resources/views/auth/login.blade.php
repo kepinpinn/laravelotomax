@@ -287,7 +287,6 @@
     </div>
 
     <!-- Login Form -->
-    <div><p>Login</p></div>
     <form method="POST" action="{{ route('login') }}">
       @csrf
       <input id="email" type="email" class="fadeIn second @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Email">
