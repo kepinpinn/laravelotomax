@@ -27,7 +27,7 @@ class DataController extends Controller
     }
 
     public function getProductByMerk($id){
-        $produk = Produk::where('merk_id', $id)->get();
+        $produk = Produk::where('merk', $id)->get();
         return $produk;
     }
 
