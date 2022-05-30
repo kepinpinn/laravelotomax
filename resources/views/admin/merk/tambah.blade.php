@@ -11,7 +11,7 @@
             </div>
             <div class="form-group" style="margin-bottom: 10px;">
                 <label for="nama">Gambar</label>
-                <input type="file" class="form-control" name="gambar">
+                <input type="file" class="form-control" name="foto_merek">
             </div>
         <div class="text-right" >
             <button type="submit" class="btn btn-success text-right">Simpan</button>

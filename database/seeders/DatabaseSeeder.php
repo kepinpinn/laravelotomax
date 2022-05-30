@@ -16,8 +16,6 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
         $this->call(
             [
-            MerkSeeder::class,
-            ProdukSeeder::class,
             UserSeeder::class]
         );
     }

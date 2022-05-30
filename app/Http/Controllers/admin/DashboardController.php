@@ -165,8 +165,8 @@ class DashboardController extends Controller
 
     public function saveMerk(Request $req){
         $path = '';
-        if($req->file('gambar')){
-            $file = $req->file('gambar');
+        if($req->file('foto_merek')){
+            $file = $req->file('foto_merek');
             $filename = $file->getClientOriginalName();
             $path = $file->move(public_path('images'), $filename);
         }else{
@@ -192,13 +192,13 @@ class DashboardController extends Controller
     public function updateMerk(Request $req, $id){
         $merk = Merk::findOrFail($id);
         
-        if($req->file('gambar')){
+        if($req->file('foto_merek')){
             File::delete('images/'.$merk->foto_merek);
-            $file = $req->file('gambar');
+            $file = $req->file('foto_merek');
             $filename = $file->getClientOriginalName();
             $path = $file->move(public_path('images'), $filename);
         }else{
-            $filename = "";
+            $filename = $merk->foto_merek;
         }
 
         $merk->merek = $req->nama;

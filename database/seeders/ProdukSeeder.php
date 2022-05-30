@@ -14,16 +14,7 @@ class ProdukSeeder extends Seeder
      */
     public function run()
     {
-        Produk::create([
-            'nama_produk' => 'GTC01RR',
-            'harga_produk' => '1000000',
-            'deskripsi_produk' => 'Bisa Digunakan Untuk Mobil Bisa Digunakan Untuk Mobil Bisa Digunakan Untuk Mobil Bisa Digunakan Untuk Mobil Bisa Digunakan Untuk Mobil Bisa Digunakan Untuk Mobil Bisa Digunakan Untuk Mobil Bisa Digunakan Untuk Mobil Bisa Digunakan Untuk Mobil Bisa Digunakan Untuk Mobil Bisa Digunakan Untuk Mobil Bisa Digunakan Untuk Mobil Bisa Digunakan Untuk Mobil',
-            
-            'merk' => '1',
-            'link' => 'x',
 
-            'promo' => '1'
-        ]);
 
     }
 }

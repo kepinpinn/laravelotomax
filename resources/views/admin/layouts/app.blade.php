@@ -93,7 +93,7 @@
           <li class="nav-item">
             <a class="nav-link" href="{{ route('admin.indexRules') }}" style="font-size: 20px;">
               <span data-feather="aperture" style="height: 24px; width: 24px;"></span>
-              Rule
+              Rules
             </a>
           </li>
         </ul>

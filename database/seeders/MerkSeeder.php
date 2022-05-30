@@ -14,20 +14,6 @@ class MerkSeeder extends Seeder
      */
     public function run()
     {
-        Merk::create([
-            'merek' => 'Enkei',
-        ]);
 
-        Merk::create([
-            'merek' => 'Rays',
-        ]);
-
-        Merk::create([
-            'merek' => 'Work',
-        ]);
-
-        Merk::create([
-            'merek' => 'Sparco',
-        ]);
     }
 }
