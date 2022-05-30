@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class KelompokIndikator extends Model
 {
     use HasFactory;
+    protected $table = 'kelompok_indikators';
     protected $fillable = [
         'pertanyaan'
     ];

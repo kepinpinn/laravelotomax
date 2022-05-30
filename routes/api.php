@@ -26,3 +26,7 @@ Route::get('getProductById/{id}', [App\Http\Controllers\api\DataController::clas
 Route::get('getProductByPromo/{promo}', [App\Http\Controllers\api\DataController::class, 'getProductByPromo']);
 Route::get('getCategoryName/{id}', [App\Http\Controllers\api\DataController::class, 'getCategoryName']);
 Route::get('testData', [App\Http\Controllers\api\DataController::class, 'testData']);
+
+Route::get('getkelompokindikator', [App\Http\Controllers\api\DataController::class, 'getKI']);
+
+Route::post('getlist-hasil', [App\Http\Controllers\api\DataController::class, 'getIndikatorList']);

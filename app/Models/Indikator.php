@@ -8,11 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Indikator extends Model
 {
     use HasFactory;
+    // protected $table = 'indikator_produk';
+
     protected $fillable = [
         "nama_indikator",
         "id_kelompok"
     ];
-    
+
     public function produkss(){
         return $this->belongsToMany(Produk::class, "indikator_produk", "id_indikator", "id_produk");
     }
