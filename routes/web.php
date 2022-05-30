@@ -20,6 +20,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::group(['middleware' => 'auth'], function (){
+    Route::get('/home',[App\Http\Controllers\admin\DashboardController::class, 'indexProduk'])->name('admin.indexProduk');
     Route::get('admin/dashboard', [App\Http\Controllers\admin\DashboardController::class, 'indexProduk'])->name('admin.indexProduk');
     Route::get('admin/dashboard/produk/tambah', [App\Http\Controllers\admin\DashboardController::class, 'addProduk'])->name('admin.produk.tambah');
     Route::post('admin/dashboard/produk/simpan', [App\Http\Controllers\admin\DashboardController::class, 'saveProduk'])->name('admin.produk.simpan');
@@ -59,4 +60,4 @@ Route::group(['middleware' => 'auth'], function (){
     Route::get('admin/dashboard/rules', [App\Http\Controllers\admin\DashboardController::class, 'indexRules'])->name('admin.indexRules');
 });
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
